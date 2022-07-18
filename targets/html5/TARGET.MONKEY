@@ -1,0 +1,6 @@
+
+#TARGET_NAME="Html5 Game"
+#TARGET_SYSTEM="html5"
+#TARGET_BUILDER="html5"
+#TARGET_VERSION="2.0.0"
+

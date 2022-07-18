@@ -1,0 +1,28 @@
+
+(Новичок в Monkey? Начните со страницы [[Getting started|Первые шаги в Monkey]] или взгляните на [[Samples|Примеры]])
+
+>> Справочник по программированию
+
+* [[Target SDKs|Установка SDK для целевых платформ]]
+* [[API Reference|Справочник по API]]
+* [[Programming/File formats|Форматы файлов]]
+* [[Programming/Resource paths|Пути ресурсов]]
+* [[Programming/App config settings|Параметры конфигурации приложения]]
+* [[Programming/Language reference|Справочник по языку]]
+* [[Programming/Keywords|Справочник по ключевым словам]]
+* [[Tutorials|Уроки]]
+* [[Samples|Примеры]]
+
+>> Инструменты
+
+* [[Tools/Trans]]
+* [[Tools/MServer]]
+* [[Tools/Makedocs]]
+* [[Tools/Jentos]]
+
+>> Онлайн-ресурсы
+
+* [Изучите Monkey](http://commondatastorage.googleapis.com/monkeycoder.co.nz/blitz-wiki/learnmonkey.pdf) с помощью руководства по программированию для начинающих от Джеймса Бойда (англ., pdf)
+* Взгляните на туториал [Monkey Pixels](http://commondatastorage.googleapis.com/monkeycoder.co.nz/blitz-wiki/monkeypixels/monkeypixels_tutorial.pdf) от Робберта Принса (англ., pdf).
+* Следуйте руководству [Путь Monkey](http://commondatastorage.googleapis.com/monkeycoder.co.nz/blitz-wiki/pathofthemonkey/index.html) от Патрика Странделла (англ.).
+* Посмотрите новые видеоуроки от invaderJim на [[http://www.youtube.com/user/smalltimeoutlaws/videos?view=1|YouTube]].

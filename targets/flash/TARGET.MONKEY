@@ -1,0 +1,5 @@
+
+#TARGET_NAME="Flash Game"
+#TARGET_SYSTEM="flash"
+#TARGET_BUILDER="flash"
+#TARGET_VERSION="1.0.0"

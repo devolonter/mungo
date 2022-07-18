@@ -1,0 +1,111 @@
+> Вывод изображений
+
+В этом уроке, мы загрузим изображения из контейнера ресурсов нашего приложения, и узнаем больше о [[mojo.graphics]].
+
+<pre>
+Import mojo
+	
+Class Game Extends App
+
+	Field image:Image
+
+    Method OnCreate()
+		SetUpdateRate 30
+		image=LoadImage("monkey64.png")
+    End
+
+	Method OnRender()
+		Cls
+		DrawImage image,20,20 		
+	End
+
+End
+
+Function Main()
+    New Game()
+End
+</pre>	
+
+Создадим новый файл Monkey, вставим код приведенный выше и сохраним его как "game.monkey" в новой папке на вашем компьютере.
+
+При запуске, это приложение покажет черный экран, поскольку команда [[LoadImage]] не сможет найти файл monkey64.png.
+
+Создайте новую папку с именем "game.data" в той папке, где вы до этого сохранили "game.monkey". Скопируйте это [изображение](http://commondatastorage.googleapis.com/monkeycoder.co.nz/blitz-wiki/monkeylogos/monkey64.png) в только что созданный контейнер ресурсов.
+
+>> Добавляем точки по клику
+
+Добавим новый класс Point, который содержит  пару координат x и y типа Float.
+
+<pre>
+Class Point
+	Field x#
+	Field y#
+End
+</pre>
+
+Также, добавим контейнер List для управления точками, которые будут добавляться каждый раз, когда пользователь кликнет на экране.
+
+<pre>
+	Field points:=New List<Point>
+</pre>
+
+Запись ":=" является кратким эквивалентом стандартного приравнивания, который выводит тип левой стороны из типа правой стороны. В данном случае, поле points типа List<Point> можно также объявить и инициализировать более "многословным" способом:
+
+<pre>
+	Field points:List<Point>=New List<Point>
+</pre>
+
+Тип List<Point> является примером обобщенного класса Monkey. List<Point> поддерживает стандартный интерфейс списка, но конкретизирован для типа Point.
+
+<pre>
+Import mojo
+
+Class Point
+	Field x#
+	Field y#
+End
+
+Class Game Extends App
+
+	Field image:Image
+	Field points:=New List<Point>
+
+	Method OnCreate()
+		SetUpdateRate 30
+		image=LoadImage("monkey64.png")
+	End
+
+	Method AddPoint(x#,y#)
+		Local p:Point=New Point
+		p.x=x
+		p.y=y
+		points.AddLast p
+	End
+
+	Method OnUpdate()
+		If MouseHit() AddPoint MouseX,MouseY
+	End
+
+	Method OnRender()
+		Cls
+		For Local point:=Eachin points
+			DrawImage image,point.x,point.y
+		Next
+	End
+
+End
+
+Function Main()
+    New Game()
+End
+</pre>
+
+Метод списка [[AddLast]] вызывается, чтобы добавить объект каждый раз, когда пользователь щелкает мышью.
+
+Метод OnRender, с помощью перечисления, выводит обезьян.
+
+<pre>
+		For Local point:=Eachin points
+</pre>
+
+Это позволяет Monkey обрабатывать каждый элемент списка в порядке его добавления.

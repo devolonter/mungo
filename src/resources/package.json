@@ -1,0 +1,10 @@
+{
+  "name": "mungo-resources",
+  "version": "0.0.0",
+  "dependencies": {
+    "gulp": "~3.8.5",
+    "gulp-svg2png": "~0.2.3",
+    "merge-stream": "~0.1.2",
+    "gulp-rename": "~1.2.0"
+  }
+}

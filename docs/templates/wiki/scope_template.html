@@ -1,0 +1,392 @@
+<h1>${KIND} ${IDENT}${TYPE}</h1>
+
+${IF SUMMARY}
+<div class="bs-callout">
+	<h4 class="text-muted">Summary</h4>
+	<p>${SUMMARY}</p>
+	${IF DESCRIPTION}
+	<p><a href="#description"> Read More...</a></p>
+	${ENDIF}
+</div>
+${ENDIF}
+
+<nav class="scope">
+
+${IF EXTENDS}
+<dl class="dl-horizontal">
+	<dt>Extends:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			<li><code>${XEXTENDS}</code></li>
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF IMPLEMENTS}
+<dl class="dl-horizontal">
+	<dt>Implements:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			<li><code>${XIMPLEMENTS}</code></li>
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF EXTENDED_BY}
+<dl class="dl-horizontal">
+	<dt>Extended&nbsp;by:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			<li><code>${XEXTENDED_BY}</code></li>
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF IMPORTS}
+<dl class="dl-horizontal">
+	<dt>Imports:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR IMPORTS}
+			<li><code><a href="${URL}">${IDENT}</a></code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF CLASSES}
+<dl class="dl-horizontal">
+	<dt>Classes:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR CLASSES}
+			<li><code><a href="${URL}">${IDENT}</a></code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF INTERFACES}
+<dl class="dl-horizontal">
+	<dt>Interfaces:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR INTERFACES}
+			<li><code><a href="${URL}">${IDENT}</a></code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF CONSTS}
+<dl class="dl-horizontal">
+	<dt>Constants:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR CONSTS}
+			<li><code>${IDENT}:${TYPE}</code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF GLOBALS}
+<dl class="dl-horizontal">
+	<dt>Globals:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR GLOBALS}
+			<li><code><a href="#${UIDENT}">${IDENT}</a>:${TYPE}</code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF FIELDS}
+<dl class="dl-horizontal">
+	<dt>Fields:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR FIELDS}
+			<li><code><a href="#${UIDENT}">${IDENT}</a>:${TYPE}</code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF CTORS}
+<dl class="dl-horizontal">
+	<dt>Constructors:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR CTORS}
+			<li><code><a href="#${UIDENT}">${IDENT}</a> ${TYPE}</code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF PROPERTIES}
+<dl class="dl-horizontal">
+	<dt>Properties:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR PROPERTIES}
+			<li><code><a href="#${UIDENT}">${IDENT}</a>:${TYPE}</code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF METHODS}
+<dl class="dl-horizontal">
+	<dt>Methods:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR METHODS}
+			<li><code><a href="#${UIDENT}">${IDENT}</a>:${TYPE}</code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF FUNCTIONS}
+<dl class="dl-horizontal">
+	<dt>Functions:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR FUNCTIONS}
+			<li><code><a href="#${UIDENT}">${IDENT}</a>:${TYPE}</code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF INHERITED_PROPERTIES}
+<dl class="dl-horizontal">
+	<dt>Inherited Properties:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR INHERITED_PROPERTIES}
+			<li><code><a href="${URL}">${IDENT}</a>:${TYPE}</code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF INHERITED_METHODS}
+<dl class="dl-horizontal">
+	<dt>Inherited Methods:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR INHERITED_METHODS}
+			<li><code><a href="${URL}">${IDENT}</a>:${TYPE}</code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+${IF INHERITED_FUNCTIONS}
+<dl class="dl-horizontal">
+	<dt>Inherited Functions:</dt>
+	<dd>
+		<ul class="list-unstyled">
+			${FOR INHERITED_FUNCTIONS}
+			<li><code><a href="${URL}">${IDENT}</a>:${TYPE}</code></li>
+			${NEXT}
+		</ul>
+	</dd>
+</dl>
+${ENDIF}
+
+</nav>
+
+${IF DESCRIPTION}
+<h2 id="description">Detailed Discussion</h2>
+<p>${DESCRIPTION}</p>
+
+${IF LINKS}
+<dl>
+	<dt>See also</dt>
+	<dd>${LINKS}</dd>
+</dl>
+${ENDIF}
+
+${IF EXAMPLE}
+<dl>
+	<dt><a href="${EXAMPLE_URL}">Example</a></dt>
+	<dd>${EXAMPLE}</dd>
+</dl>
+${ENDIF}
+${ENDIF}
+
+${IF FIELDS}
+<h3>Field Documentation</h3>
+
+${FOR FIELDS}
+<div id="${UIDENT}" class="bs-callout bs-code">
+	<h4 class="text-muted">Field ${IDENT}:${XTYPE}</h4>
+	<hr>
+	<small>${DESCRIPTION}</small>
+
+	${IF LINKS}
+	<dl class="text-muted">
+		<dt>See also</dt>
+		<dd>${LINKS}</dd>
+	</dl>
+	${ENDIF}
+
+	${IF EXAMPLE}
+	<dl class="text-muted">
+		<dt><a href="${EXAMPLE_URL}">Example</a></dt>
+		<dd>${EXAMPLE}</dd>
+	</dl>
+	${ENDIF}
+</div>
+${NEXT}
+${ENDIF}
+
+${IF GLOBALS}
+<h3>Global Documentation</h3>
+
+${FOR GLOBALS}
+<div id="${UIDENT}" class="bs-callout bs-code">
+	<h4 class="text-muted">Global ${IDENT}:${XTYPE}</h4>
+	<hr>
+	<small>${DESCRIPTION}</small>
+
+	${IF LINKS}
+	<dl class="text-muted">
+		<dt>See also</dt>
+		<dd>${LINKS}</dd>
+	</dl>
+	${ENDIF}
+
+	${IF EXAMPLE}
+	<dl class="text-muted">
+		<dt><a href="${EXAMPLE_URL}">Example</a></dt>
+		<dd>${EXAMPLE}</dd>
+	</dl>
+	${ENDIF}
+</div>
+${NEXT}
+${ENDIF}
+
+${IF CTORS}
+<h3>Constructor Documentation</h3>
+
+${FOR CTORS}
+<div id="${UIDENT}" class="bs-callout bs-code">
+	<h4 class="text-muted">Method New ${XTYPE}</h4>
+	<hr>
+	<small>${DESCRIPTION}</small>
+
+	${IF LINKS}
+	<dl class="text-muted">
+		<dt>See also</dt>
+		<dd>${LINKS}</dd>
+	</dl>
+	${ENDIF}
+
+	${IF EXAMPLE}
+	<dl class="text-muted">
+		<dt><a href="${EXAMPLE_URL}">Example</a></dt>
+		<dd>${EXAMPLE}</dd>
+	</dl>
+	${ENDIF}
+</div>
+${NEXT}
+${ENDIF}
+
+${IF PROPERTIES}
+<h3>Property Documentation</h3>
+
+${FOR PROPERTIES}
+<div id="${UIDENT}" class="bs-callout bs-code">
+	<h4 class="text-muted">Method ${IDENT}:${XTYPE} Property</h4>
+	<hr>
+	<small>${DESCRIPTION}</small>
+
+	${IF LINKS}
+	<dl class="text-muted">
+		<dt>See also</dt>
+		<dd>${LINKS}</dd>
+	</dl>
+	${ENDIF}
+
+	${IF EXAMPLE}
+	<dl class="text-muted">
+		<dt><a href="${EXAMPLE_URL}">Example</a></dt>
+		<dd>${EXAMPLE}</dd>
+	</dl>
+	${ENDIF}
+</div>
+${NEXT}
+${ENDIF}
+
+${IF METHODS}
+<h3>Method Documentation</h3>
+
+${FOR METHODS}
+<div id="${UIDENT}" class="bs-callout bs-code">
+	<h4 class="text-muted">Method ${IDENT}:${XTYPE}</h4>
+	<hr>
+	<small>${DESCRIPTION}</small>
+
+	${IF LINKS}
+	<dl class="text-muted">
+		<dt>See also</dt>
+		<dd>${LINKS}</dd>
+	</dl>
+	${ENDIF}
+
+	${IF EXAMPLE}
+	<dl class="text-muted">
+		<dt><a href="${EXAMPLE_URL}">Example</a></dt>
+		<dd>${EXAMPLE}</dd>
+	</dl>
+	${ENDIF}
+</div>
+${NEXT}
+${ENDIF}
+
+${IF FUNCTIONS}
+<h3>Function Documentation</h3>
+
+${FOR FUNCTIONS}
+<div id="${UIDENT}" class="bs-callout bs-code">
+	<h4 class="text-muted">Function ${IDENT}:${XTYPE}</h4>
+	<hr>
+	<small>${DESCRIPTION}</small>
+
+	${IF LINKS}
+	<dl class="text-muted">
+		<dt>See also</dt>
+		<dd>${LINKS}</dd>
+	</dl>
+	${ENDIF}
+
+	${IF EXAMPLE}
+	<dl class="text-muted">
+		<dt><a href="${EXAMPLE_URL}">Example</a></dt>
+		<dd>${EXAMPLE}</dd>
+	</dl>
+	${ENDIF}
+</div>
+${NEXT}
+${ENDIF}

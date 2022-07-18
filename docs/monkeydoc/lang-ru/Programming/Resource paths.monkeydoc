@@ -1,0 +1,31 @@
+
+> Пути к ресурсам в Monkey
+
+Ресурсы приложения могут хранится в различных местах, например, в контейнере ресурсов, в локальной файловой системе или на удаленном сервере.
+
+При использовании функций и методов, которые открывают или загружают ресурсы, вы можете использовать любой из следующих специальных префиксов при указании пути к ним:
+
+* Используйте префиксы "http://" или "https://", чтобы обратиться к ресурсам, находящимся на удаленном сервере. 
+
+* Используйте префикс "monkey://data/", чтобы обратиться к ресурсам, размещенным в контейнере ресурсов приложения. 
+
+* Используйте префикс "monkey://internal/", чтобы обратиться к ресурсам, находящимся во внутреннем хранилище приложения.
+
+Не все префиксы работают на всех таргетах, а точное поведение каждого префикса зависит от конкретной платформы. Например, Android и iOS могут загружать изображения с http://, но не могут загружать звуковые файлы, а GLFW не может загружать с http:// вовсе. Хотя, полная поддержка всех префиксов есть в планах.
+
+Кроме того, обратите внимание, что команды загрузки модуля Mojo автоматически вставляют префикс "monkey://data/" перед любым путем, который еще не включает в себя префикс. Например, LoadImage ("myimage.png") то же самое, что и LoadImage( "monkey://data/myimage.png" ).
+
+
+>> Поддерживаемые префиксы путей к ресурсам
+
+* *web* = http://, https://
+* *data* = monkey://data/
+* *file* = monkey://internal/
+
+| Функция														| Android 			| iOS				| Win8			| Glfw			| Html5		| Flash	| Xna	| Psm	| Stdcpp
+| [[Modules/mojo.app#LoadString]]								| web, data, file	| data, file		| data, file	| data, file	| web, data	| data	| data	| data	| NA
+| [[Modules/mojo.graphics#LoadImage]]							| web, data, file	| web, data, file	| data, file	| data, file	| web, data	| data	| data	| data	| NA
+| [[Modules/mojo.audio#LoadSound]]								| data				| data, file		| data, file	| data, file	| web, data	| data	| data	| data	| NA
+| [[Modules/mojo.audio#PlayMusic]]								| data				| data, file		| data, file	| data, file	| web, data	| data	| data	| data	| NA
+| [[Modules/brl.databuffer/DataBuffer#Load|DataBuffer.Load]]	| web, data, file	| data, file		| data, file	| data,file		| web, data	| data	| data	| data	| file
+| [[Modules/brl.filestream/FileStream#Open|FileStream.Open]]	| file				| file				| file			| file			| NA		| NA	| file	| file	| file

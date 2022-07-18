@@ -1,0 +1,100 @@
+> Первые шаги в Monkey
+
+>> Main
+
+Начнем с самой маленькой программы на Monkey.
+
+<pre>
+Function Main()
+	Print "Hello"
+End
+</pre>
+	
+Выбрав в качестве целевой платформы HTML5, мы убеждаемся, что можем создать и просмотреть наши приложения написанные на Monkey.
+
+Подробнее о точке входа в приложении Monkey, вы можете узнать прочитав пункт «Программы и объявления» в разделе [[Language reference|Справочник по языку Monkey]].
+
+
+>> Game App
+
+Сейчас мы соберем приложение с использование mojo, которое назовем Game (в Monkey классы, как правило, пишутся с заглавной буквы).
+
+<pre>
+Import mojo
+
+Class Game Extends App
+	
+	Method OnCreate()
+		Print "hello"
+	End
+	
+End
+
+Function Main()
+	New Game()
+End
+</pre>	
+
+Класс mojo [[App]] предоставляет нам методы для работы с устройствами ввода, графикой и звуком. Каркас приложения выше создает одиночное приложение, используя определение класса Game.
+
+>> Спиральная анимация
+
+Когда объект нашей игры определен, мы расширяем базовые части обновления и рендеринга приложения.
+
+Минимальными требованиями для анимации приложения Monkey являются реализация следующих методов класса App:
+
+* [[OnCreate]] должен вызывать [[SetUpdateRate]]
+
+* [[OnUpdate]] может использовать команды для работы с устройствами ввода mojo
+
+* [[OnRender]] может использовать команды для вывода изображений
+
+Следующий код выводит анимированную спираль, используя команду [[DrawPoint]].
+
+<pre>
+Import mojo
+
+Class Game Extends App
+
+	' радиальная спираль с выровненной по оси фазой
+		
+	Function DrawSpiral(clock)
+		Local w=DeviceWidth/2
+		For Local i#=0 Until w*1.5 Step .2
+			Local x#,y#
+			x=w+i*Sin(i*3+clock)
+			y=w+i*Cos(i*2+clock)
+			DrawPoint x,y
+		Next
+	End
+
+	Field updateCount
+	
+	Method OnCreate()
+		Print "spiral"
+		
+		SetUpdateRate 60
+	End
+	
+	Method OnUpdate()
+		updateCount+=1
+	End
+		
+	Method OnRender()
+		Cls
+		DrawSpiral updateCount
+		DrawSpiral updateCount*1.1
+	End
+	
+End
+
+Function Main()
+	New Game()
+End
+</pre>	
+
+Каждая спираль, выведенная программой начинается в середине экрана и крутится с помощью математических функций [[Sin]] и [[Cos]].
+
+Здесь вы можете увидеть работу финального приложения:
+
+<iframe src="data/First monkey steps/spiral/spiral.build/html5/MonkeyGame.html" width=640 height=480 scrolling=no></iframe>

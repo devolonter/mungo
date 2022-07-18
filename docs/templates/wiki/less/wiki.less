@@ -1,0 +1,44 @@
+//mixins
+@import "../bower_components/bootstrap-less/less/mixins";
+
+//reset
+@import "../bower_components/bootstrap-less/less/normalize";
+@import "../bower_components/bootstrap-less/less/print";
+
+//core css
+@import "../bower_components/bootstrap-less/less/scaffolding";
+@import "../bower_components/bootstrap-less/less/type";
+@import "../bower_components/bootstrap-less/less/code";
+@import "../bower_components/bootstrap-less/less/grid";
+@import "../bower_components/bootstrap-less/less/forms";
+
+//redefine core css
+@import "tables";
+
+//components
+@import "../bower_components/bootstrap-less/less/navs";
+@import "../bower_components/bootstrap-less/less/navbar";
+@import "../bower_components/bootstrap-less/less/breadcrumbs";
+
+//some additional classes
+@import "bscallout";
+@import "code";
+@import "stickyfooter";
+@import "navs";
+@import "type";
+
+//utility;
+@import "../bower_components/bootstrap-less/less/utilities";
+
+.breadcrumb {
+	border-radius: 0;
+}
+
+#footer {
+	background-color: @footer-bg;
+	color: @footer-color;
+}
+
+#footer when (iscolor(@footer-border)) {
+	border-top: 1px solid @footer-border;
+}

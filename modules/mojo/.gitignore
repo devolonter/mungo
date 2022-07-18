@@ -1,0 +1,6 @@
+/native/*
+!/native/mojo.html5.js
+!/native/mojo.html5.webgl.js
+!/native/mojo.glfw.cpp
+!/native/asyncimageloader.js
+!/native/asyncsoundloader.js

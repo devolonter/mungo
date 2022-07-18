@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Mungo Documentation</title>
+	<link rel="stylesheet" href="pagestyle.css"/>
+</head>
+<body>
+	<div id="wrap">
+		<div class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="Home.html" class="navbar-brand"><img src="data/logo.png" alt=""/></a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="Home.html">Home</a></li>
+					<li><a href="API Reference.html">APIs</a></li>
+					<li><a href="Modules.html">Modules</a></li>
+					<li><a href="Classes.html">Classes</a></li>
+					<li><a href="Interfaces.html">Interfaces</a></li>
+					<li><a href="Functions.html">Functions</a></li>
+					<li><a href="Programming_Language reference.html">Language</a></li>
+					<li><a href="Index.html">Index</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="content">
+			<ul class="breadcrumb">
+                ${IF NAVLINKS}
+				<li><a href="Home.html">Home</a></li>
+				${ENDIF}
+
+                ${FOR NAVLINKS}
+                <li ${IF LAST} class="active" ${ENDIF}>${IF NOT LAST}<a href='${URL}'>${IDENT}</a>${ENDIF} ${IF LAST} ${IDENT} ${ENDIF}</li>
+                ${NEXT}
+			</ul>
+
+			<div class="container-fluid">
+                ${CONTENT}
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<div class="container-fluid">
+            <p>
+                Code and documentation licensed under <a href="License.html">The zlib/libpng License</a><br>
+                Who did what &mdash; mungo and Monkey <a href="Credits.html">сredits</a>
+            </p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.pretty {
+	background-color: lighten(@pre-bg, 2%);
+	border: solid 1px lighten(@pre-border-color, 5%);
+	padding: @padding-base-vertical @padding-base-horizontal;
+	border-radius: @border-radius-base;
+	margin: 0 0 (@line-height-computed / 2);
+	overflow-x: auto;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	> code {
+		background-color: transparent;
+		padding: 0;
+		margin: 0;
+		border-radius: 0;
+
+		&.d {
+			color: darken(@brand-info, 10%);
+		}
+
+		&.k {
+			color: @brand-primary;
+		}
+
+		&.i {
+			color: lighten(@gray-dark, 10%);
+		}
+
+		&.l {
+			color: @brand-danger;
+		}
+
+		&.r {
+			color: @brand-success;
+		}
+	}
+}

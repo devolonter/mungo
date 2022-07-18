@@ -1,0 +1,21 @@
+{
+  "name": "template-wiki",
+  "version": "1.0.0",
+  "authors": [
+    "Arthur Bikmullin <devolonter@gmail.com>"
+  ],
+  "main": "pagestyle.less",
+  "license": "MIT",
+  "homepage": "http://mungo.io/",
+  "devDependencies":{
+    "bootstrap-less": "3.1.*"
+  },
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

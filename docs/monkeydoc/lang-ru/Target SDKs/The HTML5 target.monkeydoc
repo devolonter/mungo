@@ -1,0 +1,24 @@
+> Целевая платформа HTML5
+
+HTML5 — это новый стандарт для написания веб-приложений.
+
+>> Вам понадобится
+
+* Современный браузер, поддерживающий HTML5. Например Chrome, Firefox, Opera, Safari или IE9 и выше.
+
+>> Примечание
+
+Приложения HTML5 используют элемент canvas для рендера графики. Чтобы изменить размер и компоновку холста, вам нужно внести изменения в файлы MonkeyGame.html и/или main.js в директории приложения .build/html5.
+
+>> Кроссдоменные запросы
+
+Для того, чтобы HTML-приложение выполняло кроссдоменные запросы (например, с помощью класса [[HttpRequest]]), удаленный сервер должен быть правильно настроен. 
+
+Более подробную информацию можно найти здесь: [Cross-origin resource sharing](http://ru.wikipedia.org/wiki/Cross-origin_resource_sharing)
+
+Например, вы можете использовать PHP для настройки сервера и отправки следующих HTTP-заголовков: 
+
+`Access-Control-Allow-Headers: origin, content-type, access-control-allow-origin`~n
+`Access-Control-Allow-Origin: *`~n
+`Access-Control-Max-Age: 86400`~n
+`Allow: GET, POST, OPTIONS`~n

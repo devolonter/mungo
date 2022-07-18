@@ -1,0 +1,15 @@
+> Целевая платформа Flash
+
+Flash — популярная платформа для веб-приложений от Adobe.
+
+>> Вам понадобится
+
+* [Flex SDK](http://flex.apache.org/installer.html) — компилятор от Adobe/Apache с открытым исходным кодом
+
+* Набор инструментов разработчика [Java SE JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
+>> Примечания
+
+Переменная `FLEX_PATH` в файле конфигурации [[Trans|Транслятора]] должна иметь корректное значение.
+
+Чтобы изменить размер и/или расположение окна Flash-приложения, вам понадобится изменить файл MonkeyGame.as в папке .build/flash.

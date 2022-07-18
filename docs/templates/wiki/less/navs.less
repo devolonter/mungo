@@ -1,0 +1,29 @@
+nav.scope {
+	li {
+		overflow: hidden;
+		position: relative;
+
+		code {
+			background: transparent;
+			border-radius: 0;
+			font-size: 100%;
+			text-overflow: clip;
+		}
+
+		&:after {
+			content: "";
+			pointer-events: none;
+			position: absolute;
+			width: 50px;
+			height: 100%;
+			top: 0; right: 0;
+
+			#gradient > .horizontal(
+				rgba(red(@body-bg), green(@body-bg), blue(@body-bg), 0),
+				rgba(red(@body-bg), green(@body-bg), blue(@body-bg), 1)
+			);
+		}
+	}
+
+	margin-bottom: ceil(@line-height-computed * 2);
+}

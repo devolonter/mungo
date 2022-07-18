@@ -1,0 +1,5 @@
+
+#TARGET_NAME="PS Mobile Game"
+#TARGET_SYSTEM="psm"
+#TARGET_BUILDER="psm"
+#TARGET_VERSION="1.0.0"

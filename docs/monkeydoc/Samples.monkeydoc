@@ -1,0 +1,87 @@
+> Monkey samples
+
+>> Arthur "devolonter" and Olga "AhNinniah" Bikmullin
+
++ [[../../samples/devolonter/matchup/matchup.monkey|Match up]] 
+
+>> Gerry Quin
+
++ [[../../samples/gerryq/picpuzzle/picpuzzle.monkey|Picture puzzle]]
+
+>> Impixi
+
++ [[../../samples/impixi/life/life.monkey|Game of life]]
+
+>> Ferdi
+
++ [[../../samples/ferdi/snake/snake.monkey|Snake]]
++ [[../../samples/ferdi/breakout/breakout.monkey|Breakout]]
+
+>> Charlie Knight
+
++ [[../../samples/charlie/blobmonster/blobmonster.monkey|Blob monster]]
+
+>> Origaming
+
++ [[../../samples/origaming/DegreeAndRadian/DegreeAndRadian.monkey|Degrees vs Radians]]
++ [[../../samples/origaming/FollowMouse/FollowMouse.monkey|Follow mouse]]
++ [[../../samples/origaming/MacOsMenu/MacOsMenu.monkey|MacOS dock style menu]]
++ [[../../samples/origaming/RotatingObjects/RotatingObjects.monkey|Rotating objects]]
+
+>> Richard Betson
+
++ [[../../samples/Richard_Betson/mirror_fx_transform/mirror_fx_transform.monkey|Mirror FX]]
++ [[../../samples/Richard_Betson/TileImage/TileImage.monkey|Tile Image]]
++ [[../../samples/Richard_Betson/line_v_circle_collision/line_v_circle_collision.monkey|Line vs circle]]
++ [[../../samples/Richard_Betson/simple_verlet_physics/simple_verlet_physics.monkey|Simple verlet physics]]
+
+>> Jonathan Pittock
+
++ [[../../samples/skn3/monkenstein/monkenstein.monkey|Monkenstein]]
++ [[../../samples/skn3/spiralmatrix/spiralmatrix.monkey|Spiral matrix]]
++ [[../../samples/skn3/texteffect/texteffect.monkey|Text effect]]
++ [[../../samples/skn3/tweening/tweendemo.monkey|Tween demo]]
++ [[../../samples/skn3/config/configdemo.monkey|Config demo]]
++ [[../../samples/skn3/iconfun/iconfun.monkey|Async icon fun!]]
+
+>> James Boyd
+
++ [[../../samples/hitoro/autofit/autofitdemo.monkey|Auto-fit]]
++ [[../../samples/hitoro/basicgame/basicgame.monkey|Basic game]]
++ [[../../samples/hitoro/delta/delta.monkey|Delta timing]]
++ [[../../samples/hitoro/gamestates_demo/gamestates_demo.monkey|Game states]]
++ [[../../samples/hitoro/jump_rotate/jump_rotate.monkey|Jump rotate]]
++ [[../../samples/hitoro/matrixrocks/matrixrocks.monkey|Matrix rocks!]]
++ [[../../samples/hitoro/rockout/rockout.monkey|Rockout]]
++ [[../../samples/hitoro/rotationsickness/rotationsickness.monkey|Rotation sickness]]
+
+>> Christian Perfect
+
++ [[../../samples/warpy/bezier/bezier.monkey|Bezier]]
++ [[../../samples/warpy/hilbert/hilbert.monkey|Hilbert]]
++ [[../../samples/warpy/horsey/horsey.monkey|Horsey!]]
++ [[../../samples/warpy/json/json.monkey|JSON]]
++ [[../../samples/warpy/monkeypuzzle/monkeypuzzle.monkey|MonkeyPuzzle]]
++ [[../../samples/warpy/pegs/pegs.monkey|Pegs]]
++ [[../../samples/warpy/transform/transform.monkey|Transform]]
++ [[../../samples/warpy/transform/transform_mouse.monkey|Transform mouse]]
+</ul|
+
+>> Peter Scheutz
+
++ [[../../samples/difference/champagne/champagne.monkey|Champagne]]
++ [[../../samples/difference/clock/clock.monkey|Clock]]
+
+>> Robin Shackford
+
++ [[../../samples/beaker/angelfont_example/angelfont_example.monkey|Angelfont]]
+
+>> Mark Sibly
+
++ [[../../samples/mak/acceltest/acceltest.monkey|Accelerometer test]]
++ [[../../samples/mak/audiotest/audiotest.monkey|Audio test]]
++ [[../../samples/mak/firepaint/firepaint.monkey|Touch test]]
++ [[../../samples/mak/mojotest/mojotest.monkey|Graphics test]]
++ [[../../samples/mak/suspendtest/suspendtest.monkey|Suspend test]]
++ [[../../samples/mak/bouncyaliens/bouncyaliens.monkey|Bouncy Aliens!]]
++ [[../../samples/mak/httpgetter/httpgetter.monkey|Simple async HTTP demo]]
