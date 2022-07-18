@@ -1,0 +1,9 @@
+# ignore everything
+*
+!*.mk
+!*.bat
+!src/**/*
+*.class
+!jni_gen.bat
+!.gitignore
+!*/

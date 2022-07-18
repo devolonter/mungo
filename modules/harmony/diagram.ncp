@@ -1,0 +1,251 @@
+<Project>
+  <Name>harmony</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>graphics.backend</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>ShaderProgram</Name>
+        <Access>Public</Access>
+        <Location left="249" top="35" />
+        <Size width="221" height="1352" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public static String ATTRIBUTE_COLOR</Member>
+        <Member type="Field">public static String ATTRIBUTE_NORMAL</Member>
+        <Member type="Field">public static String ATTRIBUTE_POSITION</Member>
+        <Member type="Field">public static String ATTRIBUTE_TEXCOORD</Member>
+        <Member type="Field">public static String UNIFORM_PROJECTION</Member>
+        <Member type="Field">public static String UNIFORM_SAMPLER</Member>
+        <Member type="Field">public static String VARYING_COLOR</Member>
+        <Member type="Field">public static String VARYING_TEXCOORD</Member>
+        <Member type="Field">private StringMap&lt;ShaderAttribute&gt; attributes</Member>
+        <Member type="Field">private int fragmentShaderID</Member>
+        <Member type="Field">private String fragmentShaderSource</Member>
+        <Member type="Field">private boolean invalidated</Member>
+        <Member type="Field">private boolean isCompiled</Member>
+        <Member type="Field">private int program</Member>
+        <Member type="Field">private StringMap&lt;ShaderUniform&gt; uniforms</Member>
+        <Member type="Field">private int vertexShaderID</Member>
+        <Member type="Field">private String vertexShaderSource</Member>
+        <Member type="Property">public String FragmentShaderSource { get; set; }</Member>
+        <Member type="Property">public String VertexShaderSource { get; set; }</Member>
+        <Member type="Constructor">public ShaderProgram(String vertexShader, String fragmentShader)</Member>
+        <Member type="Method">public MapValues&lt;String, ShaderAttribute&gt; Attributes()</Member>
+        <Member type="Method">public void Bind()</Member>
+        <Member type="Method">public void DisableVertexAttribute(int location)</Member>
+        <Member type="Method">public void DisableVertexAttribute(String name)</Member>
+        <Member type="Method">public void Discard()</Member>
+        <Member type="Method">public void EnableVertexAttribute(int location)</Member>
+        <Member type="Method">public void EnableVertexAttribute(String name)</Member>
+        <Member type="Method">public ShaderAttribute GetAttribute(String name)</Member>
+        <Member type="Method">public ShaderUniform GetUniform(String name)</Member>
+        <Member type="Method">public boolean HasAttribute(String name)</Member>
+        <Member type="Method">public boolean HasUniform(String name)</Member>
+        <Member type="Method">public void Invalidate()</Member>
+        <Member type="Method">public boolean IsCompiled()</Member>
+        <Member type="Method">public void SetUniform1fv(String name, float[] values, int offset, int length)</Member>
+        <Member type="Method">public void SetUniform1fv(int location, float[] values, int offset, int length)</Member>
+        <Member type="Method">public void SetUniform2fv(int location, float[] values, int offset, int length)</Member>
+        <Member type="Method">public void SetUniform2fv(String name, float[] values, int offset, int length)</Member>
+        <Member type="Method">public void SetUniform3fv(int location, float[] values, int offset, int length)</Member>
+        <Member type="Method">public void SetUniform3fv(String name, float[] values, int offset, int length)</Member>
+        <Member type="Method">public void SetUniform4fv(String name, float[] values, int offset, int length)</Member>
+        <Member type="Method">public void SetUniform4fv(int location, float[] values, int offset, int length)</Member>
+        <Member type="Method">public void SetUniformf(int location, float value1, float value2, float value3)</Member>
+        <Member type="Method">public void SetUniformf(int location, float value1, float value2, float value3, float value4)</Member>
+        <Member type="Method">public void SetUniformf(String name, float value1, float value2, float value3)</Member>
+        <Member type="Method">public void SetUniformf(int location, float value)</Member>
+        <Member type="Method">public void SetUniformf(String name, float value)</Member>
+        <Member type="Method">public void SetUniformf(String name, float value1, float value2, float value3, float value4)</Member>
+        <Member type="Method">public void SetUniformf(String name, float value1, float value2)</Member>
+        <Member type="Method">public void SetUniformf(int location, float value1, float value2)</Member>
+        <Member type="Method">public void SetUniformi(String name, int value1, int value2, int value3)</Member>
+        <Member type="Method">public void SetUniformi(int location, int value1, int value2, int value3, int value4)</Member>
+        <Member type="Method">public void SetUniformi(String name, int value1, int value2, int value3, int value4)</Member>
+        <Member type="Method">public void SetUniformi(String name, int value)</Member>
+        <Member type="Method">public void SetUniformi(String name, int value1, int value2)</Member>
+        <Member type="Method">public void SetUniformi(int location, int value)</Member>
+        <Member type="Method">public void SetUniformi(int location, int value1, int value2)</Member>
+        <Member type="Method">public void SetUniformi(int location, int value1, int value2, int value3)</Member>
+        <Member type="Method">public void SetUniformMatrix2fv(int location, int count, float[] value, boolean transpose)</Member>
+        <Member type="Method">public void SetUniformMatrix2fv(String name, int count, float[] value, boolean transpose)</Member>
+        <Member type="Method">public void SetUniformMatrix3fv(String name, int count, float[] value, boolean transpose)</Member>
+        <Member type="Method">public void SetUniformMatrix3fv(int location, int count, float[] value, boolean transpose)</Member>
+        <Member type="Method">public void SetUniformMatrix3fv(int location, int count, float[] value, boolean transpose)</Member>
+        <Member type="Method">public void SetUniformMatrix4fv(String name, int count, float[] value, boolean transpose)</Member>
+        <Member type="Method">public void SetVertexAttribute(int location, int size, int type, boolean normalize, int stride, DataBuffer buffer)</Member>
+        <Member type="Method">public void SetVertexAttribute(String name, int size, int type, boolean normalize, int stride, int offset)</Member>
+        <Member type="Method">public void SetVertexAttribute(String name, int size, int type, boolean normalize, int stride, DataBuffer buffer)</Member>
+        <Member type="Method">public void SetVertexAttribute(int location, int size, int type, boolean normalize, int stride, int offset)</Member>
+        <Member type="Method">public void Unbind()</Member>
+        <Member type="Method">public MapValues&lt;String, ShaderUniform&gt; Unifroms()</Member>
+        <Member type="Method">public void Validate()</Member>
+        <Member type="Method">private void Compile()</Member>
+        <Member type="Method">private static int CompileShader(int type, String source)</Member>
+        <Member type="Method">private void InitAttributes()</Member>
+        <Member type="Method">private void InitUniforms()</Member>
+        <Member type="Method">private void Link()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Texture</Name>
+        <Access>Public</Access>
+        <Location left="10" top="265" />
+        <Size width="187" height="621" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public static int FILTER_LINEAR</Member>
+        <Member type="Field">public static int FILTER_LINEAR_MIPMAP_LINEAR</Member>
+        <Member type="Field">public static int FILTER_LINEAR_MIPMAP_LINEAR</Member>
+        <Member type="Field">public static int FILTER_LINEAR_MIPMAP_NEAREST</Member>
+        <Member type="Field">public static int FILTER_NEAREST</Member>
+        <Member type="Field">public static int FILTER_NEAREST_MIPMAP_LINEAR</Member>
+        <Member type="Field">public static int FILTER_NEAREST_MIPMAP_NEAREST</Member>
+        <Member type="Field">public static int WRAP_CLAMP_TO_EDGE</Member>
+        <Member type="Field">public static int WRAP_MIRRORED_REPEAT</Member>
+        <Member type="Field">public static int WRAP_REPEAT</Member>
+        <Member type="Field">private int handle</Member>
+        <Member type="Field">private int magFilter</Member>
+        <Member type="Field">private int minFilter</Member>
+        <Member type="Field">private int newField</Member>
+        <Member type="Field">private int uWrap</Member>
+        <Member type="Field">private int vWrap</Member>
+        <Member type="Constructor">public Texture(int target = HGL.TEXTURE_2D)</Member>
+        <Member type="Method">public void Bind(int unit)</Member>
+        <Member type="Method">public void Bind()</Member>
+        <Member type="Method">public void Discard()</Member>
+        <Member type="Method">public int Handle()</Member>
+        <Member type="Method">public void Invalidate()</Member>
+        <Member type="Method">public int MagFilter()</Member>
+        <Member type="Method">public int MinFilter()</Member>
+        <Member type="Method">public void SetFilter(int minFilter, int magFilter)</Member>
+        <Member type="Method">public void SetWrap(int u, int v)</Member>
+        <Member type="Method">public void UnsafeSetFilter(int minFilter, int magFilter)</Member>
+        <Member type="Method">public void UnsafeSetWrap(int u, int v)</Member>
+        <Member type="Method">public int UWrap()</Member>
+        <Member type="Method">public void Validate()</Member>
+        <Member type="Method">public int VWrap()</Member>
+        <Member type="Method">private void Create()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Batch</Name>
+        <Access>Public</Access>
+        <Location left="915" top="35" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public float[] vertices</Member>
+        <Member type="Field">public int[] indices</Member>
+        <Member type="Constructor">public Batch(int verticesCapacity, int indicesCapacity)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Comment">
+        <Text>Shader source and shader source path both can be passed to constructor</Text>
+        <Location left="523" top="281" />
+        <Size width="160" height="93" />
+      </Entity>
+      <Entity type="Class">
+        <Name>ShaderAttribute</Name>
+        <Access>Public</Access>
+        <Location left="714" top="35" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String name</Member>
+        <Member type="Field">private int type</Member>
+        <Member type="Field">private int size</Member>
+        <Member type="Constructor">public ShaderAttribute(String name, int type, int size)</Member>
+        <Member type="Property">public String Name { get; set; }</Member>
+        <Member type="Property">public int Type { get; set; }</Member>
+        <Member type="Property">public int Size { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ShaderUniform</Name>
+        <Access>Public</Access>
+        <Location left="523" top="35" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String name</Member>
+        <Member type="Field">private int type</Member>
+        <Member type="Field">private int size</Member>
+        <Member type="Constructor">public ShaderUniform(String name, int type, int size)</Member>
+        <Member type="Property">public String Name { get; set; }</Member>
+        <Member type="Property">public int Type { get; set; }</Member>
+        <Member type="Property">public int Size { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IResource</Name>
+        <Access>Public</Access>
+        <Location left="10" top="10" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void Validate()</Member>
+        <Member type="Method">void Invalidate()</Member>
+        <Member type="Method">void Discard()</Member>
+      </Entity>
+      <Entity type="Comment">
+        <Text>Because in JS we should use special arrays</Text>
+        <Location left="926" top="303" />
+        <Size width="160" height="75" />
+      </Entity>
+      <Entity type="Class">
+        <Name>HGL</Name>
+        <Access>Public</Access>
+        <Location left="1135" top="35" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Comment">
+        <Text>Wrapper for GL API</Text>
+        <Location left="1146" top="123" />
+        <Size width="160" height="75" />
+      </Entity>
+      <Entity type="Comment">
+        <Text>Idea.
+
+Add precompiler constant #HARMONY_TEXTURE_MANAGER_IMPLEMENTED and #HARMONY_SHADER_MANAGER_IMPLEMENTED and enable/disable auto managment in ShaderProgram and Texture class</Text>
+        <Location left="929" top="428" />
+        <Size width="377" height="102" />
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Comment" first="3" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="0" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="1" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="4" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Comment" first="7" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Comment" first="9" second="8">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
